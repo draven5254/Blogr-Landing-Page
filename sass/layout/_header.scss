@@ -1,0 +1,44 @@
+header .container,
+.nav-item,
+.about-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  padding-inline: 24px;
+
+  @include respond(big-desktop) {
+    font-family: "Ubuntu", sans-serif;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+header .container {
+  position: relative;
+  justify-content: space-between;
+
+  @include respond(big-desktop) {
+    gap: 4rem;
+    width: 100%;
+    max-width: 1105px;
+    margin-inline: auto;
+  }
+}
+
+.logo img {
+  width: 82px;
+
+  @include respond(big-desktop) {
+    width: 101px;
+    padding-block: 15px;
+    transform: translateY(-2px);
+  }
+}

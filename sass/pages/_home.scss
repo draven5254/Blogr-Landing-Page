@@ -1,0 +1,64 @@
+.home {
+  background: url(../images/bg-pattern-intro-mobile.svg),
+    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  height: 600px;
+  border-bottom-left-radius: 100px;
+  background-position: center;
+  background-position: left 35.4% top 33.8%;
+  background-size: 1324px;
+  padding: 2px;
+
+  @include respond(big-desktop) {
+    font-family: "Ubuntu", sans-serif;
+    background: url(../images/bg-pattern-intro-desktop.svg),
+      linear-gradient(to right, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 75%);
+    background-size: 3175px;
+    background-position: 25.25% -71%;
+  }
+}
+
+.about {
+  padding-block: 4.4rem;
+  overflow: hidden;
+
+  @include respond(big-desktop) {
+    position: relative;
+  }
+}
+
+.features {
+  margin-top: 11.3rem;
+  min-height: 625px;
+  padding-block: 100px 112px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background: url(images/bg-pattern-circles.svg),
+    linear-gradient(150deg, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%));
+  background-position: center bottom 256.5px, center;
+  background-size: 160%, auto;
+  background-repeat: no-repeat;
+
+  @include respond(big-desktop) {
+    margin-top: -0.9rem;
+    padding-inline: 123px;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 0;
+    background-image: url(../images/bg-pattern-circles.svg),
+      linear-gradient(to right, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%));
+    background-position: top -512px left -215px, center;
+    background-size: 1018px, auto;
+  }
+}
+
+.services {
+  padding-block: 3.9rem 5.8rem;
+  overflow: hidden;
+
+  @include respond(big-desktop) {
+    padding-block: 7.3rem 7.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

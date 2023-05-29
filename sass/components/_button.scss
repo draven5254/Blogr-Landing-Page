@@ -1,0 +1,138 @@
+// NAVBAR AND BAR MENU TOGGLE BUTTON
+
+.nav-toggle-btn {
+  width: 32px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+
+  @include respond(big-desktop) {
+    display: none;
+  }
+}
+
+.nav-toggle-btn:before,
+.nav-toggle-btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.25s ease;
+}
+
+.nav-toggle-btn:after {
+  top: 8px;
+}
+
+.nav-toggle-btn.active {
+  background-color: transparent;
+}
+
+.nav-toggle-btn.active:before {
+  transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+
+.nav-toggle-btn.active:after {
+  transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
+// LOGIN AND SIGNUP BUTTON
+
+.auth-btns {
+  padding-block: 24px 32px;
+
+  @include respond(big-desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 2rem;
+  }
+}
+
+.auth-btns .btn {
+  height: 40px;
+  width: 138px;
+  margin-inline: auto;
+  font-size: 17px;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+
+  @include respond(big-desktop) {
+    height: 46px;
+    font-size: 16px;
+    font-weight: 500;
+    width: initial;
+    color: hsl(0, 0%, 100%);
+  }
+}
+
+.auth-btns .btn:last-child {
+  color: #fff;
+  height: 48px;
+  line-height: 52px;
+  margin-top: 12px;
+  border-radius: 80px;
+  background: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+
+  @include respond(big-desktop) {
+    line-height: initial;
+    width: 138px;
+    border-radius: 80px;
+    background: hsl(0, 0%, 100%);
+    margin-right: -7px;
+    margin-top: -4px;
+    color: hsl(356, 100%, 66%);
+    transition: 0.25s ease;
+  }
+}
+
+.auth-btns .btn:last-child:hover {
+  @include respond(big-desktop) {
+    background-color: hsl(355, 100%, 74%);
+    color: hsl(0, 0%, 100%);
+  }
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-cta {
+  height: 48px;
+  border: 1px solid #fff;
+  user-select: none;
+  line-height: 50px;
+  width: 138px;
+  border-radius: 100px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.25s ease;
+}
+
+.btn-cta:first-child {
+  background-color: #fff;
+  color: hsl(356, 100%, 66%);
+}
+
+.btn-cta:first-child:hover {
+  color: #fff;
+  background-color: hsl(355, 100%, 74%);
+  border-color: hsl(355, 100%, 74%);
+}
+
+.btn-cta:last-child:hover {
+  background-color: #fff;
+  color: hsl(356, 100%, 66%);
+}
